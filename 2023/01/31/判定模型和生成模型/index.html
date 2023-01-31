@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.7">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://newromantics.top/tags/标签2/"/>
+  
+  <link rel="canonical" href="http://newromantics.top/2023/01/31/判定模型和生成模型/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,17 +31,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>标签：标签2 - 嘉爷の博客</title>
+  <title>判定模型和生成模型 - 嘉爷の博客</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="记录自己平时遇到的问题 - NewRomantics - 嘉爷の博客">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="嘉爷の博客">
-<meta property="og:url" content="http://newromantics.top/tags/%E6%A0%87%E7%AD%BE2/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="判定模型和生成模型">
+<meta property="og:url" content="http://newromantics.top/2023/01/31/%E5%88%A4%E5%AE%9A%E6%A8%A1%E5%9E%8B%E5%92%8C%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/index.html">
 <meta property="og:site_name" content="嘉爷の博客">
-<meta property="og:description" content="记录自己平时遇到的问题">
+<meta property="og:description" content="判定模型：根据x来”判别”Y， 求的是条件概率分布  生成模型：预测的根据是联合概率分布P(x，Y)，而联合概率可以理解为“生成”(x, Y)样本的概率分布。具体来说就是已知x,从Y的候选集合选出一个来，可能的样本有(x,Y1)、(x,Y2)，(x,Y3)…(x,Yn),实际数据是如何生成的依赖于P(x,Y)。最后选出“生成”概率最大的那个Yn。 总结：二者目的都是在使后验概率最大化，判定模型是直">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-01-31T09:40:34.000Z">
+<meta property="article:modified_time" content="2023-01-31T14:36:24.883Z">
 <meta property="article:author" content="NewRomantics">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1624,7 +1626,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1675157359414),
+    lastupdate: new Date(1675175816040),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2317,7 +2319,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper  search' style="display: none;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://raw.githubusercontent.com/fireworksfly/pictures/main/%E9%BB%84%E6%98%8F.jpg"></div>
 
@@ -2392,25 +2394,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://newromantics.top/2023/01/31/我的第一篇文章/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://newromantics.top/2023/01/31/判定模型和生成模型/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="嘉爷の博客">
   </span>
@@ -2419,67 +2405,277 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="记录自己平时遇到的问题">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/01/31/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"  itemprop="url">
-        我的第一篇文章
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        12314141242
+    
+      <h1 class="title" itemprop="name headline">
+        判定模型和生成模型
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://raw.githubusercontent.com/fireworksfly/pictures/main/%E7%8C%AB%E5%92%AA%E5%A4%B4%E5%83%8F.jpg" class="lazyload" data-srcset="https://raw.githubusercontent.com/fireworksfly/pictures/main/%E7%8C%AB%E5%92%AA%E5%A4%B4%E5%83%8F.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">sjjh</p>
+  </a>
+</div>
 
-      
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">机器学习</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-01-31T11:44:56+08:00">2023-01-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%88%86%E7%B1%BB1/">分类1</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%88%86%E7%B1%BB1/" itemprop="url"><span itemprop="name">分类1</span></a>
-            </span>
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-01-31T17:40:34+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年1月31日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h3 id="判定模型："><a href="#判定模型：" class="headerlink" title="判定模型："></a>判定模型：</h3><p><font size=3>根据x来”判别”Y， 求的是条件概率分布 </font></p>
+<h3 id="生成模型："><a href="#生成模型：" class="headerlink" title="生成模型："></a>生成模型：</h3><p><font size=3>预测的根据是联合概率分布P(x，Y)，而联合概率可以理解为“生成”(x, Y)样本的概率分布。具体来说就是已知x,从Y的候选集合选出一个来，可能的样本有(x,Y<sub>1</sub>)、(x,Y<sub>2</sub>)，(x,Y<sub>3</sub>)…(x,Y<sub>n</sub>),实际数据是如何生成的依赖于P(x,Y)。最后选出“生成”概率最大的那个Y<sub>n</sub>。</font></p>
+<p align="justify"  style="line-height:200%; font-size:16px; color: red">总结：二者目的都是在使后验概率最大化，判定模型是直接对后验概率进行建模，但是生成模型通过贝叶斯定理这一“桥梁”使问题转化为求联合概率。说人话就是判定模型通过经验误差最小原则来决定决策边界。而生成模型通过统计学习各个类别的分布来决定决策边界。</p>
+<p align="justify"  style="line-height:200%; font-size:16px;">
+上面的解释可能还不是说明清楚，之前在维基百科上看到一个很好的解释。
+</p>
+<p align="justify"  style="line-height:200%; font-size:16px;">
+假设有四个样本
+</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>样本1</th>
+<th>样本2</th>
+<th>样本3</th>
+<th>样本4</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>x</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p align="justify"  style="line-height:200%; font-size:16px; color:orange">
+生成模型的世界
+</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>y&#x3D;0</th>
+<th>y&#x3D;1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>x</td>
+<td>1&#x2F;2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>1&#x2F;4</td>
+<td>1&#x2F;4</td>
+</tr>
+</tbody></table>
+<p align="justify"  style="line-height:200%; font-size:16px; color:orange">
+生成模型的世界
+</p>
+
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2023/01/31/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-01-31T22:36:24+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年1月31日</p>
+  </a>
 </div>
 
-          </div>
         
       
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-  </section>
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://newromantics.top/2023/01/31/%E5%88%A4%E5%AE%9A%E6%A8%A1%E5%9E%8B%E5%92%8C%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/&title=判定模型和生成模型 - 嘉爷の博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://newromantics.top/2023/01/31/%E5%88%A4%E5%AE%9A%E6%A8%A1%E5%9E%8B%E5%92%8C%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/&title=判定模型和生成模型 - 嘉爷の博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://newromantics.top/2023/01/31/%E5%88%A4%E5%AE%9A%E6%A8%A1%E5%9E%8B%E5%92%8C%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/&title=判定模型和生成模型 - 嘉爷の博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
-    
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/01/31/Python%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%97%E7%9A%84%E6%90%9C%E7%B4%A2%E8%B7%AF%E5%BE%84/'>
+          <p class='title'>Python导入模块的搜索路径<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+1、启动文件所在的目录 
+2、PYTHONPATH环境变量中配置的目录
+3、标准库目录， 其实就是安装python时一起安装进系统的模块
+4、lib\site-packages下面.pth文件...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
   
 
 
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2023/01/31/%E5%88%A4%E5%AE%9A%E6%A8%A1%E5%9E%8B%E5%92%8C%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-  
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2488,142 +2684,52 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://raw.githubusercontent.com/fireworksfly/pictures/main/%E8%B7%AF%E9%A3%9E%E5%A4%B4%E5%83%8F.jpeg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>NewRomantics</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">嘉爷の博客</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="mailto:247715089@qq.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/fireworksfly"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/python/" href="/categories/python/"
-            active-action="action-categoriespython"
-            ><div class='name'>python</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%88%86%E7%B1%BB1/" href="/categories/%E5%88%86%E7%B1%BB1/"
-            active-action="action-categoriesE58886E7B1BB1"
-            ><div class='name'>分类1</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/%E6%A0%87%E7%AD%BE1/" style="font-size: 14px; color: #999">标签1</a> <a href="/tags/%E6%A0%87%E7%AD%BE2/" style="font-size: 14px; color: #999">标签2</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget text desktop pjax">
-  
-  <header>
-    
-      <a target="_blank" rel="noopener" href='https://github.com/fireworksfly'><i class="fab fa-github fa-fw" aria-hidden="true"></i><span class='name'>点个赞吧</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A4%E5%AE%9A%E6%A8%A1%E5%9E%8B%EF%BC%9A"><span class="toc-text">判定模型：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B%EF%BC%9A"><span class="toc-text">生成模型：</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2651,13 +2757,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2684,6 +2791,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
     <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
     
     <!-- Custom Files footer begin-->
     
@@ -3125,7 +3240,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"嘉爷の博客","url":"http://newromantics.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/","sameAs":["https://github.com/volantis-x"],"description":"记录自己平时遇到的问题"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://newromantics.top/","name":"嘉爷の博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://newromantics.top/tags/标签2/","name":"标签2"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"嘉爷の博客","url":"http://newromantics.top/","keywords":null,"description":"记录自己平时遇到的问题","author":{"@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/","description":"记录自己平时遇到的问题"},"publisher":{"@type":"Organization","name":"嘉爷の博客","url":"http://newromantics.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://newromantics.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"记录自己平时遇到的问题","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/"},"publisher":{"@type":"Organization","name":"嘉爷の博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"嘉爷の博客","url":"http://newromantics.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/","sameAs":["https://github.com/volantis-x"],"description":"记录自己平时遇到的问题"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://newromantics.top/","name":"嘉爷の博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://newromantics.top/categories/机器学习/","name":"机器学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://newromantics.top/2023/01/31/判定模型和生成模型/","name":"判定模型和生成模型"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"嘉爷の博客","url":"http://newromantics.top/","keywords":null,"description":"记录自己平时遇到的问题","author":{"@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/","description":"记录自己平时遇到的问题"},"publisher":{"@type":"Organization","name":"嘉爷の博客","url":"http://newromantics.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://newromantics.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"判定模型和生成模型","description":"记录自己平时遇到的问题","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://newromantics.top/2023/01/31/%E5%88%A4%E5%AE%9A%E6%A8%A1%E5%9E%8B%E5%92%8C%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/"},"author":{"@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/"},"publisher":{"@type":"Organization","name":"嘉爷の博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://newromantics.top/2023/01/31/%E5%88%A4%E5%AE%9A%E6%A8%A1%E5%9E%8B%E5%92%8C%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/","wordCount":0,"datePublished":"2023-01-31T09:40:34.000Z","dateModified":"2023-01-31T14:36:24.883Z","articleSection":"机器学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
