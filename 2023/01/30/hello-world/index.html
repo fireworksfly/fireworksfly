@@ -1626,7 +1626,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1675131891239),
+    lastupdate: new Date(1675147866198),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -1646,7 +1646,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       fancybox: {"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.umd.js"},
       
       aplayer: {
-        id: 2015408138,
+        id: 3175833810,
         enable:true
       },
       
@@ -2360,16 +2360,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="none" class='cover-wrapper post search' style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="https://s1.vika.cn/space/2022/09/09/aec0dbb7d8b74aecac29572cb929b84a"></div>
+  <div class='cover-bg lazyload placeholder' data-bg="https://raw.githubusercontent.com/fireworksfly/pictures/main/%E9%BB%84%E6%98%8F.jpg"></div>
 
 <div class='cover-body'>
   <div class='top'>
     
     
-      <p class="title">示例博客</p>
+      <p class="title">嘉爷の博客</p>
     
-    
-      <p class="subtitle">A theme example</p>
     
   </div>
   <div class='bottom'>
@@ -2598,6 +2596,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
   
+    <div class="prev-next">
+      
+        <a class='prev' href='/2023/01/31/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>我的第一篇文章</p>
+          <p class='content'>12314141242
+</p>
+        </a>
+      
+      
+    </div>
+  
   <!-- Custom Files postEnd begin-->
   
   <!-- Custom Files postEnd end-->
@@ -2750,11 +2759,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       volume='0.7'
       loop='all'
       order='list'
-      fixed='true'
+      fixed='false'
       list-max-height='320px'
       server='netease'
       type='playlist'
-      id='2015408138'
+      id='3175833810'
       list-folded='true'>
     </meting-js>
   
@@ -2777,7 +2786,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
             
-              <a href="mailto:2077780946@qq.com"
+              <a href="mailto:247715089@qq.com"
                 class="social fas fa-envelope flat-btn"
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
@@ -2786,7 +2795,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
             
-              <a href="https://github.com/kjhuanhao"
+              <a href="https://github.com/fireworksfly"
                 class="social fab fa-github flat-btn"
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
@@ -2944,8 +2953,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/aplayer/dist/APlayer.min.css");
   (async () => {
     // APlayer 需要在  MetingJS 之前加载
-    await volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/aplayer/dist/APlayer.min.js")
-    await volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/meting/dist/Meting.min.js")
+    await volantis.js("https://unpkg.com/aplayer@1.10/dist/APlayer.min.js")
+    await volantis.js("https://unpkg.com/meting@2.0/dist/Meting.min.js")
   
   })();
 
@@ -2964,7 +2973,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             Metings.forEach((item, index) => {
               const aplayerItem = item.aplayer; if(!aplayerItem) return;
               const rightAplayerCheck = 'true' === 'true'
-                && item.meta.id === '2015408138';
+                && item.meta.id === '3175833810';
               if(rightAplayerCheck && typeof RightMenuAplayer !="undefined") RightMenuAplayer.checkAPlayer();
               if(aplayerItem.events.events.play.every(item => {return item.name !== 'messagePlay'})) {
                 aplayerItem.on('play', function messagePlay() {
@@ -3033,7 +3042,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   function pjax_giscus() {
     const HEAD = check_giscus();
     if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"},"repo":"kjhuanhao/comments","repo-id":"R_kgDOHhCnGA","category":"Announcements","category-id":"xxxDIC_kwDOHhCnGM4CPuKz","mapping":"pathname","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN"},pdata.commentConfig)
+    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"},"repo":"fireworksfly/comments","repo-id":"R_kgDOI34LMA","category":"Announcements","category-id":"DIC_kwDOI34LMM4CT528","mapping":"pathname","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN"},pdata.commentConfig)
     const script = document.createElement('script');
     script.setAttribute('src', 'https://giscus.app/client.js');
     Object.keys(cfg).forEach(k=>{
