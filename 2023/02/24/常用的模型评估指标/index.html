@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.7">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://newromantics.top/archives/2023/01/"/>
+  
+  <link rel="canonical" href="http://newromantics.top/2023/02/24/常用的模型评估指标/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -31,17 +31,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>归档：2023/1 - 嘉爷の博客</title>
+  <title>常用的模型评估指标 - 嘉爷の博客</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="记录自己平时遇到的问题 - NewRomantics - 嘉爷の博客">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="嘉爷の博客">
-<meta property="og:url" content="http://newromantics.top/archives/2023/01/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用的模型评估指标">
+<meta property="og:url" content="http://newromantics.top/2023/02/24/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/index.html">
 <meta property="og:site_name" content="嘉爷の博客">
-<meta property="og:description" content="记录自己平时遇到的问题">
+<meta property="og:description" content="在模型的评估过程中，分类问题、排序问题、回归问题往往需要使用不同的指标进行评估。大部分的指标只能片面的反映模型的一部分性能，所以我们需要充分的了解这些指标，并且合理的运用它们。 准确率（Accuracy）准确率指的是分类正确的样本占总样本个数的比例，即 ​                                                           $$\bold{Accur">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-02-24T15:50:30.000Z">
+<meta property="article:modified_time" content="2023-03-07T16:12:57.895Z">
 <meta property="article:author" content="NewRomantics">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2053,7 +2055,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2322,7 +2324,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  search' style="display: ;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://raw.githubusercontent.com/fireworksfly/pictures/main/%E9%BB%84%E6%98%8F.jpg"></div>
 
@@ -2398,24 +2400,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://newromantics.top/2023/01/31/判定模型和生成模型/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://newromantics.top/2023/02/24/常用的模型评估指标/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="嘉爷の博客">
   </span>
@@ -2424,139 +2410,226 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="记录自己平时遇到的问题">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/01/31/%E5%88%A4%E5%AE%9A%E6%A8%A1%E5%9E%8B%E5%92%8C%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/"  itemprop="url">
-        判定模型和生成模型
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        判定模型：根据x来”判别”Y， 求的是条件概率分布 
-生成模型：预测的根据是联合概率分布P(x，Y)，而联合概率可以理解为“生成”(x, Y)样本的概率分布。具体来说就是已知x,从Y的候选集合选出一个来，可能的样本有(x,Y1)、(x,Y2)，(x,Y3)…(x,Yn),实际数据是如何生成的依赖于P(x,Y)。最后选出“生成”概率最大的那个Yn。
-总结：二者目的都是在使后验概率最大化，判定模...
-      
+    
+      <h1 class="title" itemprop="name headline">
+        常用的模型评估指标
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://raw.githubusercontent.com/fireworksfly/pictures/main/%E7%8C%AB%E5%92%AA%E5%A4%B4%E5%83%8F.jpg" class="lazyload" data-srcset="https://raw.githubusercontent.com/fireworksfly/pictures/main/%E7%8C%AB%E5%92%AA%E5%A4%B4%E5%83%8F.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">sjjh</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">机器学习</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-01-31T17:40:34+08:00">2023-01-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">机器学习</span></a>
-            </span>
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-02-24T23:50:30+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年2月24日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>在模型的评估过程中，分类问题、排序问题、回归问题往往需要使用不同的指标进行评估。大部分的指标只能片面的反映模型的一部分性能，所以我们需要充分的了解这些指标，并且合理的运用它们。</p>
+<h3 id="准确率（Accuracy）"><a href="#准确率（Accuracy）" class="headerlink" title="准确率（Accuracy）"></a>准确率（Accuracy）</h3><p>准确率指的是分类正确的样本占总样本个数的比例，即</p>
+<p>​                                                           $$\bold{Accuracy&#x3D;{n_{correct}\over n_{total}}}$$</p>
+<p>准确率是最直观的评价指标，但是会存在明显的缺陷。比如当负样本的占比为99%时，分类器把所有样本预测为负样本也可以获得99%的准确率。<font color=red>所以当不同类别的样本非常不均衡的时候，占比大的类别往往会成为影响准确率的最主要因素。</font>为了解决这个问题，可以使用平均准确率（每个类别下样本的准确率的算术平均）作为模型评估的指标。</p>
+<h3 id="精确率（Precision）和召回率-recall"><a href="#精确率（Precision）和召回率-recall" class="headerlink" title="精确率（Precision）和召回率(recall)"></a>精确率（Precision）和召回率(recall)</h3><p>精确率是指分类正确的正样本个数占模型判定为正样本的样本个数的比例。</p>
+<p>召回率是指分类正确的正样本个数占真正的正样本个数的比例。</p>
+<p>精确率和召回率的值既统一又矛盾的两个指标，统一在如果一个模型的效果那么这两个指标的值都会很高。<font color=red>矛盾在如果要提高精确率，模型会在很有把握的情况下才会把样本判定为正样本，但此时往往会因为过于保守而漏掉很多没有把握的正样本，导致召回率降低。</font>所以通常评判一个模型的性能会通过P-R曲线图进行判断。只有通过P-R曲线的整体表现，才能够对模型进行更为全面的评估。</p>
+<p>除此之外，F1score和ROC曲线也能综合地反映一个模型的性能。其中F1score是精准率和召回率的调和平均值，它的定义为</p>
+<p>​                                                                                                $\bold{F1&#x3D;{2<em>precision</em>recall\over precision + recall}}$ </p>
+<h3 id="平方根误差（RMSE）"><a href="#平方根误差（RMSE）" class="headerlink" title="平方根误差（RMSE）"></a>平方根误差（RMSE）</h3><p>​                                                           $$\bold{RMSE&#x3D;\sqrt[2]{\frac{\sum\limits_{i &#x3D; 1}^n(y_{true} - y_{pred})^2}{n}}}$$</p>
+<p>一般情况下，RMSE能够很好地反映回归模型预测值与真实值的偏离程度。但是如果假如存在个别偏离程度非常大的离群点时，会让RMSE指标变得很差。</p>
+<p>然后就出现了平均绝对百分比误差（MAPE）。</p>
+<p>​                                                        $$ MAPE &#x3D; \sum\limits_{i &#x3D; 1}^n|\frac{y_{true} - y_{pred}}{y_{true}}| \times \frac{100}{n}$$</p>
+<p>相比RMSE，MAPE相当于把每个点的误差进行了归一化，降低了个别离群点带来的绝对误差的影响。</p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2023/01/31/%E5%88%A4%E5%AE%9A%E6%A8%A1%E5%9E%8B%E5%92%8C%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-08T00:12:57+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年3月8日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://newromantics.top/2023/01/31/Python导入模块的搜索路径/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="嘉爷の博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="嘉爷の博客">
-    <meta itemprop="description" content="记录自己平时遇到的问题">
-  </span>
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://newromantics.top/2023/02/24/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/&title=常用的模型评估指标 - 嘉爷の博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://newromantics.top/2023/02/24/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/&title=常用的模型评估指标 - 嘉爷の博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://newromantics.top/2023/02/24/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/&title=常用的模型评估指标 - 嘉爷の博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/01/31/%E5%88%A4%E5%AE%9A%E6%A8%A1%E5%9E%8B%E5%92%8C%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/'>
+          <p class='title'>判定模型和生成模型<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>判定模型：根据x来”判别”Y， 求的是条件概率分布 
+生成模型：预测的根据是联合概率分布P(x，Y)，而联合概率可以理解为“生成”(x, Y)样本的概率分布。具体来说就是已知x,从Y的候选集合选...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2023/02/24/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/01/31/Python%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%97%E7%9A%84%E6%90%9C%E7%B4%A2%E8%B7%AF%E5%BE%84/"  itemprop="url">
-        Python导入模块的搜索路径
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        
-1、启动文件所在的目录 
-2、PYTHONPATH环境变量中配置的目录
-3、标准库目录， 其实就是安装python时一起安装进系统的模块
-4、lib\site-packages下面.pth文件中指定的路径，以及下面自己扩展的第三方库
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
 
 
-注：当前的Python工程所导入的模块必须在上述路径
-
-上述的路径都会在python解释器启动的过程中被加载到sys.path中，所以也可以通过自行修改s...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-01-31T16:57:30+08:00">2023-01-31</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/python/">python</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/python/" itemprop="url"><span itemprop="name">python</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/01/31/Python%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%97%E7%9A%84%E6%90%9C%E7%B4%A2%E8%B7%AF%E5%BE%84/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
 
 
-	
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2565,127 +2638,52 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://raw.githubusercontent.com/fireworksfly/pictures/main/%E7%8C%AB%E5%92%AA%E5%A4%B4%E5%83%8F.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>NewRomantics</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">嘉爷の博客</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="mailto:247715089@qq.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/fireworksfly"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/python/" href="/categories/python/"
-            active-action="action-categoriespython"
-            ><div class='name'>python</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriesE69CBAE599A8E5ADA6E4B9A0"
-            ><div class='name'>机器学习</div><div class='badge'>(2)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget text desktop pjax">
-  
-  <header>
-    
-      <a target="_blank" rel="noopener" href='https://github.com/fireworksfly'><i class="fab fa-github fa-fw" aria-hidden="true"></i><span class='name'>点个赞吧</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E7%A1%AE%E7%8E%87%EF%BC%88Accuracy%EF%BC%89"><span class="toc-text">准确率（Accuracy）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B2%BE%E7%A1%AE%E7%8E%87%EF%BC%88Precision%EF%BC%89%E5%92%8C%E5%8F%AC%E5%9B%9E%E7%8E%87-recall"><span class="toc-text">精确率（Precision）和召回率(recall)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E6%96%B9%E6%A0%B9%E8%AF%AF%E5%B7%AE%EF%BC%88RMSE%EF%BC%89"><span class="toc-text">平方根误差（RMSE）</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2713,13 +2711,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2728,14 +2727,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -3284,7 +3283,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"嘉爷の博客","url":"http://newromantics.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/","sameAs":["https://github.com/volantis-x"],"description":"记录自己平时遇到的问题"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://newromantics.top/","name":"嘉爷の博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://newromantics.top/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://newromantics.top/archives/2023/","name":"2023年"}},{"@type":"ListItem","position":4,"item":{"@id":"http://newromantics.top/archives/2023/1/","name":"1月"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"嘉爷の博客","url":"http://newromantics.top/","keywords":null,"description":"记录自己平时遇到的问题","author":{"@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/","description":"记录自己平时遇到的问题"},"publisher":{"@type":"Organization","name":"嘉爷の博客","url":"http://newromantics.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://newromantics.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"记录自己平时遇到的问题","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/"},"publisher":{"@type":"Organization","name":"嘉爷の博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"嘉爷の博客","url":"http://newromantics.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/","sameAs":["https://github.com/volantis-x"],"description":"记录自己平时遇到的问题"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://newromantics.top/","name":"嘉爷の博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://newromantics.top/categories/机器学习/","name":"机器学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://newromantics.top/2023/02/24/常用的模型评估指标/","name":"常用的模型评估指标"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"嘉爷の博客","url":"http://newromantics.top/","keywords":null,"description":"记录自己平时遇到的问题","author":{"@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/","description":"记录自己平时遇到的问题"},"publisher":{"@type":"Organization","name":"嘉爷の博客","url":"http://newromantics.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://newromantics.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"常用的模型评估指标","description":"记录自己平时遇到的问题","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://newromantics.top/2023/02/24/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/"},"author":{"@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/"},"publisher":{"@type":"Organization","name":"嘉爷の博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://newromantics.top/2023/02/24/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/","wordCount":0,"datePublished":"2023-02-24T15:50:30.000Z","dateModified":"2023-03-07T16:12:57.895Z","articleSection":"机器学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
