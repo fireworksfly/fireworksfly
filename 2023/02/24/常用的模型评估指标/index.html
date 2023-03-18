@@ -43,7 +43,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-02-24T15:50:30.000Z">
-<meta property="article:modified_time" content="2023-03-10T15:33:50.091Z">
+<meta property="article:modified_time" content="2023-03-18T15:48:29.134Z">
 <meta property="article:author" content="NewRomantics">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1626,7 +1626,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1678462872262),
+    lastupdate: new Date(1679155300120),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2493,7 +2493,36 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>然后就出现了平均绝对百分比误差（MAPE）。</p>
 <p>​                                                        $$ MAPE &#x3D; \sum\limits_{i &#x3D; 1}^n|\frac{y_{true} - y_{pred}}{y_{true}}| \times \frac{100}{n}$$</p>
 <p>相比RMSE，MAPE相当于把每个点的误差进行了归一化，降低了个别离群点带来的绝对误差的影响。</p>
+<h3 id="ROC曲线"><a href="#ROC曲线" class="headerlink" title="ROC曲线"></a>ROC曲线</h3><p>介绍ROC曲线之前需要了解前置知识-混淆矩阵。 根据任务的需求的不同，之前的几个指标评估模型存在一定的局限性。可以通过混淆矩阵可以定义更多的衡量指标。</p>
+<table width="500" height="300" border="1" cellpadding="20" 
+cellspacing="0" align="center">
+   <tr>  <th  rowspan ="2" colspan ="2">混淆矩阵</th>   <th  colspan ="2"  align ="center" >预测值</th>   </tr>
+   <tr>  <td>Positive</td> <td>Negative</td>  </tr>
+   <tr>  <td rowspan ="2">真实值</td> <td>Positive</td> <td>TP(真正例)</td><td>FN(假反例)</td> </tr>
+   <tr>  <td>Negative</td> <td>FP(假正例)</td> <td>TN(真反例)</td>  </tr>
+</table>
 
+
+<p>下面对四个部分进行说明：</p>
+<ul>
+<li><p><strong>TP(True Positive，真正例)：</strong>将真实情况为正例的类型<strong>正确地预测为正例</strong></p>
+</li>
+<li><p><strong>FN(False Negative，假反例)：</strong>将真实情况为正例的类型<strong>错误地预测为反例</strong></p>
+</li>
+<li><p><strong>FP(False Positive，假正例)：</strong>将真实情况为反例的类型<strong>错误地预测为正例</strong></p>
+</li>
+<li><p><strong>TN(True Negative，真反例)：</strong>将真实情况为反例的类型<strong>正确地预测为反例</strong></p>
+</li>
+</ul>
+<p>ROC的横坐标为假阳性率FPR（假正例）;纵坐标为真阳性率TPR（真正例）。FPR和TPR的计算方法分别为</p>
+<p>​                                                             $$ FPR &#x3D; \frac{FP}{N}$$</p>
+<p>​                                                             $$ TPR &#x3D; \frac{TP}{P}$$</p>
+<p>上面两个式子中，P代表真实的样本数量，N是真实的负样本数量，TP代表P个正样本中被模型预测为正样本的个数，FP是N个负样本中被模型预测为正样本的个数。</p>
+<p>如何绘制ROC曲线呢？ 将FPR作为曲线的横轴，TPR作为曲线的纵轴，然后通过不断移动模型的’”截断点”，来生成一组组关键点，最后连接成线。具体做法就是样本按照预测概率从高到低排序，在输出正负例之前，指定一个阈值，预测概率大于该阈值的样本被判为正例，小于该阈值的样本被判为负例。这样就能得到一个坐标。然后不断改变阈值就能够得到很多点，最后将这些点连接成线就得到了ROC曲线。</p>
+<p>还有一种更直观地绘制ROC曲线的方法：假设正样本的数量为P，负样本的数量为N；接下来，把横轴的刻度间隔设置为$\frac{1}{N}$，纵轴的刻度间隔设置为$\frac{1}{P}$;再根据模型输出的预测概率对样本由高到低进行排序；依次遍历样本，每遇到一个正样本就沿纵轴方向绘制一个刻度间隔的曲线，每遇到一个负样本就沿横轴方向绘制一个刻度的曲线，直到遍历完所有样本，曲线最终停在(1,1)这个点，这时整个ROC曲线绘制完成。</p>
+<p>另外还有一个概念AUC，指的是ROC曲线与Y轴围成的面积大小，该值能够反映模型的性能。</p>
+<h4 id="ROC曲线与P-R曲线的比较"><a href="#ROC曲线与P-R曲线的比较" class="headerlink" title="ROC曲线与P-R曲线的比较"></a>ROC曲线与P-R曲线的比较</h4><p>相比于P-R曲线，ROC有一个特点，当正负样本的分布发生变化时，ROC曲线的形状能够基本保持不变，而P-R曲线的形状会发生剧烈变化。所以ROC曲线的适用场景更多。但是如果希望更多地看到模型在特定的数据集上的表现，P-R曲线能够更直观低反映其性能。</p>
+<h3 id="还有更多指标，未完待续……"><a href="#还有更多指标，未完待续……" class="headerlink" title="还有更多指标，未完待续……."></a>还有更多指标，未完待续…….</h3>
   </div>
   
   
@@ -2517,10 +2546,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-10T23:33:50+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-18T23:48:29+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年3月10日</p>
+    <p>更新于：2023年3月18日</p>
   </a>
 </div>
 
@@ -2658,7 +2687,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E7%A1%AE%E7%8E%87%EF%BC%88Accuracy%EF%BC%89"><span class="toc-text">准确率（Accuracy）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B2%BE%E7%A1%AE%E7%8E%87%EF%BC%88Precision%EF%BC%89%E5%92%8C%E5%8F%AC%E5%9B%9E%E7%8E%87-recall"><span class="toc-text">精确率（Precision）和召回率(recall)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E6%96%B9%E6%A0%B9%E8%AF%AF%E5%B7%AE%EF%BC%88RMSE%EF%BC%89"><span class="toc-text">平方根误差（RMSE）</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E7%A1%AE%E7%8E%87%EF%BC%88Accuracy%EF%BC%89"><span class="toc-text">准确率（Accuracy）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B2%BE%E7%A1%AE%E7%8E%87%EF%BC%88Precision%EF%BC%89%E5%92%8C%E5%8F%AC%E5%9B%9E%E7%8E%87-recall"><span class="toc-text">精确率（Precision）和召回率(recall)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E6%96%B9%E6%A0%B9%E8%AF%AF%E5%B7%AE%EF%BC%88RMSE%EF%BC%89"><span class="toc-text">平方根误差（RMSE）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ROC%E6%9B%B2%E7%BA%BF"><span class="toc-text">ROC曲线</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ROC%E6%9B%B2%E7%BA%BF%E4%B8%8EP-R%E6%9B%B2%E7%BA%BF%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-text">ROC曲线与P-R曲线的比较</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%98%E6%9C%89%E6%9B%B4%E5%A4%9A%E6%8C%87%E6%A0%87%EF%BC%8C%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD%E2%80%A6%E2%80%A6"><span class="toc-text">还有更多指标，未完待续…….</span></a></li></ol>
     </div>
   </section>
 
@@ -3337,7 +3366,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"嘉爷の博客","url":"http://newromantics.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/","sameAs":["https://github.com/volantis-x"],"description":"记录自己平时遇到的问题"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://newromantics.top/","name":"嘉爷の博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://newromantics.top/categories/机器学习/","name":"机器学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://newromantics.top/2023/02/24/常用的模型评估指标/","name":"常用的模型评估指标"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"嘉爷の博客","url":"http://newromantics.top/","keywords":null,"description":"记录自己平时遇到的问题","author":{"@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/","description":"记录自己平时遇到的问题"},"publisher":{"@type":"Organization","name":"嘉爷の博客","url":"http://newromantics.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://newromantics.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"常用的模型评估指标","description":"记录自己平时遇到的问题","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://newromantics.top/2023/02/24/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/"},"author":{"@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/"},"publisher":{"@type":"Organization","name":"嘉爷の博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://newromantics.top/2023/02/24/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/","wordCount":0,"datePublished":"2023-02-24T15:50:30.000Z","dateModified":"2023-03-10T15:33:50.091Z","articleSection":"机器学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"嘉爷の博客","url":"http://newromantics.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/","sameAs":["https://github.com/volantis-x"],"description":"记录自己平时遇到的问题"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://newromantics.top/","name":"嘉爷の博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://newromantics.top/categories/机器学习/","name":"机器学习"}},{"@type":"ListItem","position":3,"item":{"@id":"http://newromantics.top/2023/02/24/常用的模型评估指标/","name":"常用的模型评估指标"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"嘉爷の博客","url":"http://newromantics.top/","keywords":null,"description":"记录自己平时遇到的问题","author":{"@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/","description":"记录自己平时遇到的问题"},"publisher":{"@type":"Organization","name":"嘉爷の博客","url":"http://newromantics.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://newromantics.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"常用的模型评估指标","description":"记录自己平时遇到的问题","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://newromantics.top/2023/02/24/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/"},"author":{"@type":"Person","name":"NewRomantics","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://newromantics.top/"},"publisher":{"@type":"Organization","name":"嘉爷の博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://newromantics.top/2023/02/24/%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87/","wordCount":0,"datePublished":"2023-02-24T15:50:30.000Z","dateModified":"2023-03-18T15:48:29.134Z","articleSection":"机器学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
